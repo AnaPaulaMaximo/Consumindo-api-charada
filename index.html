@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo de Charadas</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+    <div class="container">
+      <h1>Jogo de Charadas</h1>
+      
+      <div class="riddle-card">
+        <p id="charada">Carregando charada...</p>
+        
+        <div class="input-section">
+          <input type="text" id="input_resposta" placeholder="Digite sua resposta...">
+          <button id="submit-btn">Verificar</button>
+          <button id="nova-charada-btn">Renovar</button>
+        </div>
+        
+        <div id="result" class="result hidden">
+          <p id="result-text"></p>
+          <p id="resposta" class="hidden"></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </main>
+  </body>
+</html>
