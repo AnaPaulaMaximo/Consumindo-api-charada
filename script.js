@@ -1,7 +1,7 @@
 const baseUrl = "https://gerador-de-charadas-ashen.vercel.app";
 const aleatorio = "/charadas";
 
-// Elementos do DOM
+// Elementos do DOM (página html)
 const charadaElement = document.getElementById("charada");
 const input_resposta = document.getElementById("input_resposta");
 const submitButton = document.getElementById("submit-btn");
@@ -10,7 +10,7 @@ const result = document.getElementById("result");
 const resultText = document.getElementById("result-text");
 const respostaElement = document.getElementById("resposta");
 
-let respostaCorreta;
+let respostaCorreta ;
 
 
 // Função para buscar uma nova charada
@@ -19,8 +19,8 @@ async function getCharada() {
         const response = await fetch(baseUrl + aleatorio);
         const data = await response.json();
         
-        charadaElement.textContent = data.resposta;  // Exibe a charada
-        respostaCorreta = data.texto;  // Guarda a resposta correta
+        charadaElement.textContent = data.pergunta;  // Exibe a charada
+        respostaCorreta = data.resposta;  // Guarda a resposta correta
         
         input_resposta.value = "";
         input_resposta.focus();
